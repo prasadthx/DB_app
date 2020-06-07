@@ -1,0 +1,30 @@
+<h1>
+  This is the table of the article.
+</h1>
+<p>
+  <button>
+    <%= link_to "Create New Articles", new_article_path %>
+  </button>
+</p>
+<table border="2px">
+  <tr>
+    <th>
+      ID
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  <% @articles.each do |s| %>
+  <tr>
+    <td> <%= s.id %></td>
+    <td> <%= s.title %></td>
+    <td> <%= s.description %></td>
+    <td> <%= link_to "Edit article", edit_article_path(s.id) %></td>
+    <td> <%= link_to "Show article", article_path(s.id) %></td>
+  </tr>
+  <% end %>
+</table>
