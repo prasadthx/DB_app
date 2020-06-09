@@ -41,8 +41,28 @@ bg-light{
 
 .sierra{
   background-image: asset-url('grey.jpg');
+  color: #F7F7F7;
 }
 
 .truss{
   color: #F7F7F7;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+footer{
+  position: fixed;
+  bottom: 10px;
+  border-top: 1px solid cornflowerblue;
+
+}
+
+.mar{
+  margin-top: 50px;
+}
+
+.card{
+  alignment: center;
+  margin-left: 250px;
+  ;
 }
