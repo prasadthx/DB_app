@@ -1,0 +1,48 @@
+
+@import 'bootstrap/dist/css/bootstrap';
+
+bg-light{
+  color: #2E2F30;
+}
+
+.bg-dark{
+  color: #B00100;
+}
+
+.navbar-dark{
+  color: #B00100;
+}
+
+.center{
+  text-align: center;
+}
+
+.jumbotron{
+  background-image: asset-url('for_rails2.jpg');
+  background-size: cover;
+  height: max-content;
+  margin-top: 20px;
+}
+
+.jumbotron h1{
+  color: #999999;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.jumbotron p{
+  color: cadetblue;
+  margin-top: 40px;
+}
+
+.load{
+  margin-right: 8px;
+}
+
+.sierra{
+  background-image: asset-url('grey.jpg');
+}
+
+.truss{
+  color: #F7F7F7;
+}
