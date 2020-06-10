@@ -1,31 +1,38 @@
-<h1>
-  This is the table of the article.
+
+
+<h1 align="center" class="margin">
+  <b>
+    Articles
+  </b>
 </h1>
-<p>
-  <button>
-    <%= link_to "Create New Articles", new_article_path %>
-  </button>
+
+<%= link_to "Create New Articles", new_article_path , class:"btn btn-primary btn-sm" %>
+
+<% @articles.each do |s| %>
+  <div class="row text-dark margin">
+    <div class="col-xl-8 offset-xl-2">
+      <div class="card">
+        <div class="card-header card-title">
+          <b>
+          <%= link_to s.title, article_path(s) %>
+          </b>
+        </div>
+        <div class="card-body">
+          <div class="card-text" style=" height: 4rem;">
+            <%= truncate(s.description, length:50) %>
+          </div>
+          <hr>
+          <%= link_to "Delete article", article_path(s.id),class:"btn btn-danger btn-sm", method: :delete , data: {confirm:" Are you sure? "}  %>
+          <%= link_to "Edit this form", edit_article_path(s.id),class:"btn btn-primary btn-sm" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+<hr color="white" width="400px">
+<p align="center">
+<%= link_to "View in tables",articles_table_format_path ,class:"btn btn-primary" %>
 </p>
-<table border="2px">
-  <tr>
-    <th>
-      ID
-    </th>
-    <th>
-      Title
-    </th>
-    <th>
-      Description
-    </th>
-  </tr>
-  <% @articles.each do |s| %>
-  <tr>
-    <td> <%= s.id %></td>
-    <td> <%= s.title %></td>
-    <td> <%= s.description %></td>
-    <td> <%= link_to "Edit article", edit_article_path(s.id) %></td>
-    <td> <%= link_to "Show article", article_path(s.id) %></td>
-    <td> <%= link_to "Delete article", article_path(s.id), method: :delete , data: {confirm:" Are you sure? "}  %></td>
-  </tr>
-  <% end %>
-</table>

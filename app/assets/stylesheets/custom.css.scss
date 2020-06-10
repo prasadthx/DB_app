@@ -20,7 +20,7 @@ bg-light{
 .jumbotron{
   background-image: asset-url('for_rails2.jpg');
   background-size: cover;
-  height: max-content;
+  height:450px;
   margin-top: 20px;
 }
 
@@ -53,6 +53,7 @@ bg-light{
 footer{
   position: fixed;
   bottom: 10px;
+  right: 4px;
   border-top: 1px solid cornflowerblue;
 
 }

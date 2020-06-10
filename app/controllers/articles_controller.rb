@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
     @articles=Article.all
   end
 
+  def table_format()
+    @articles=Article.all
+  end
+
   def new
     @article = Article.new
   end
