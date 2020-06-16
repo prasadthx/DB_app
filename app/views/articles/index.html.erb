@@ -8,36 +8,7 @@
 
 <%= link_to "Create New Articles", new_article_path , class:"btn btn-primary btn-sm" %>
 
-<% @articles.each do |s| %>
-  <div class="row text-dark margin">
-    <div class="col-xl-8 offset-xl-2">
-      <div class="card">
-        <div class="card-header card-title">
-          <b>
-          <%= link_to s.title, article_path(s) %>
-          </b>
-        </div>
-        <div class="card-body">
-          <div class="card-text" style=" height: 4rem;">
-            <%= truncate(s.description, length:50) %>
-            <div class="card-footer" style="margin-top: 10px">
-            <small>Created by: <%= s.user.username if s.user%>,
-
-              <%= time_ago_in_words(s.created_at) %> ago,
-
-              last updated: <%= time_ago_in_words(s.updated_at) %> ago</small>
-            </div>
-          </div>
-          <hr>
-          <%= link_to "Delete article", article_path(s.id),class:"btn btn-danger btn-sm", method: :delete , data: {confirm:" Are you sure? "}  %>
-          <%= link_to "Edit this form", edit_article_path(s.id),class:"btn btn-primary btn-sm" %>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
-
-
+<%= render 'article', obj: @articles %>
 
 <hr color="white" width="400px">
 <p align="center">
