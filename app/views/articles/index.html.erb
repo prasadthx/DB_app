@@ -8,9 +8,16 @@
 
 <%= link_to "Create New Articles", new_article_path , class:"btn btn-primary btn-sm" %>
 
+<div align="center">
+<%= will_paginate %>
+</div>
+
 <%= render 'article', obj: @articles %>
 
 <hr color="white" width="400px">
 <p align="center">
+
+  <%= will_paginate %>
+
 <%= link_to "View in tables",articles_table_format_path ,class:"btn btn-primary" %>
 </p>

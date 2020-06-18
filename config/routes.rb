@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   root "welcome#hello"
   get 'articles/table_format' => "articles#table_format"
   get 'welcome/about' => "welcome#about"
