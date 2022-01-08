@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The project is hosted on :- 
+<a href="https://dbthx.herokuapp.com">https://dbthx.herokuapp.com</a>
 
-Things you may want to cover:
+## This is a simple blogging application where users can create post, update post or delete posts. Also it has user authentication and authorization support.
 
-* Ruby version
+## The project uses :- 
+## 1. Ruby on Rails (for frontend as well as backend)
+## 2. PostgreSQL
+## 3. Bootstrap
 
-* System dependencies
 
-* Configuration
+## Screenshots:-
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<img src="Screenshot (128).png"/>
+<img src="Screenshot (129).png"/>
+<img src="Screenshot (130).png"/>
